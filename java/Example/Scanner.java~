@@ -657,7 +657,8 @@ class Scanner implements java_cup.runtime.Scanner {
           if (zzInput == YYEOF && zzStartRead == zzCurrentPos) {
             zzAtEOF = true;
             zzDoEOF();
-              {     return sf.newSymbol("EOF",sym.EOF);
+              { 	System.out.println("EOF");
+    return sf.newSymbol("EOF",sym.EOF);
  }
           } 
           else {

@@ -19,6 +19,7 @@ import java_cup.runtime.SymbolFactory;
     return sf.newSymbol("EOF", sym.EOF);
 %eofval}
 
+/* Macros */
 Whitespace = \ | \s | \n | \t | \r | \f | \b
 Char = [^\"\\] | \\u {Unicode}
 Unicode = {Hex}{4}
@@ -65,4 +66,4 @@ Point = .
 }
 
 /* Error fallback */
-.					{ System.err.println("Illegal character: " + yytext()); }
+[^]					{ System.err.println("Illegal character: " + yytext()); }
